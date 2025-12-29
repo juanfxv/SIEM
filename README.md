@@ -8,12 +8,14 @@ Deploys a functional Security Information and Event Management (SIEM) environmen
 ## 🏗️ Lab Architecture
 * **SIEM Manager:** Ubuntu Server (running on VMware Workstation).
 * **Endpoint Agent:** Windows 11 (Host Machine).
-* [cite_start]**Network:** Configured via Bridged Networking to enable seamless communication between the VM and the host[cite: 3, 4].
+* **Network:** Configured via Bridged Networking to enable seamless communication between the VM and the host.
+![Home SOC Network Diagram](SIEM Lab Network Diagram.png)
+*Above: Logical topology showing the communication flow between the host agent and the virtualized manager.*
 
 ## 🛠️ Configuration & Implementation
-1. [cite_start]**Manager Setup:** Installed the Wazuh Manager and Indexer on Ubuntu via automated scripts[cite: 4, 5].
-2. [cite_start]**Endpoint Deployment:** Provisioned a Windows Wazuh Agent and established a secure connection using cryptographic keys[cite: 6, 7].
-3. [cite_start]**FIM Activation:** Configured the `ossec.conf` file to monitor a specific test directory using the **Syscheck** module with `realtime="yes"`[cite: 8].
+1. **Manager Setup:** Installed the Wazuh Manager and Indexer on Ubuntu via automated scripts.
+2. **Endpoint Deployment:** Provisioned a Windows Wazuh Agent and established a secure connection using cryptographic keys[cite: 6, 7].
+3. **FIM Activation:** Configured the `ossec.conf` file to monitor a specific test directory using the **Syscheck** module with `realtime="yes"`.
 
 ## 🔧 Technical Troubleshooting (Key Highlight)
 **Challenge:** Encountered a `4101` connection error where the agent failed to appear in the dashboard.
@@ -35,5 +37,5 @@ Below is the confirmation of the successful deployment, showing the Windows Agen
 
 
 ## 📊 Results
-* [cite_start]**Real-time Alerting:** Successfully triggered and analyzed "File Added" and "File Deleted" alerts in the Wazuh Dashboard after modifying the monitored test directory[cite: 9].
+* **Real-time Alerting:** Successfully triggered and analyzed "File Added" and "File Deleted" alerts in the Wazuh Dashboard after modifying the monitored test directory.
 * **System Telemetry:** Verified 100% agent uptime and secure data transmission over ports 1514 and 1515.
