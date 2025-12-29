@@ -9,7 +9,7 @@ Deploys a functional Security Information and Event Management (SIEM) environmen
 * **SIEM Manager:** Ubuntu Server (running on VMware Workstation).
 * **Endpoint Agent:** Windows 11 (Host Machine).
 * **Network:** Configured via Bridged Networking to enable seamless communication between the VM and the host.
-![Home SOC Network Diagram](SIEM_Lab_Network_Diagram)
+![Home SOC Network Diagram](SIEM_Lab_Network_Diagram.png)
 *Above: Logical topology showing the communication flow between the host agent and the virtualized manager.*
 
 ## 🛠️ Configuration & Implementation
