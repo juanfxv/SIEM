@@ -20,6 +20,20 @@ Deploys a functional Security Information and Event Management (SIEM) environmen
 **Diagnosis:** Analyzed `ossec.log` and identified a version mismatch: the Manager was running v4.12 while the Agent was v4.14.
 **Resolution:** Performed a clean uninstall of the agent and deployed the matching v4.12 MSI package, resulting in immediate successful telemetry synchronization.
 
+## 📊 Project Evidence: Dashboard & Alerts
+Below is the confirmation of the successful deployment, showing the Windows Agent reporting as **Active** and the File Integrity Monitoring (FIM) module capturing real-time file events.
+
+![Wazuh Dashboard Active Agent](image_37281f.png)
+*Above: Confirmed connectivity of Agent 003 running version 4.12.0.*
+
+![FIM Dashboard Alerts](image_377de0.png)
+*Above: Captured "Added" and "Deleted" file events during the testing phase.*
+
+![Event Log Details](image_377e79.png)
+*Above: Detailed log entry showing the specific file path and rule ID (553/554) for file modifications.*
+
+
+
 ## 📊 Results
 * [cite_start]**Real-time Alerting:** Successfully triggered and analyzed "File Added" and "File Deleted" alerts in the Wazuh Dashboard after modifying the monitored test directory[cite: 9].
 * **System Telemetry:** Verified 100% agent uptime and secure data transmission over ports 1514 and 1515.
